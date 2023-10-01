@@ -12,20 +12,17 @@ function gender(){
         }
     }
 }
-
+let answrs = [];
 let userName =prompt("Enter your Name")
-answers.push(userName);
+answrs.push(userName);
 let userTitle = gender();
-answers.push(userTitle);
+answrs.push(userTitle);
 let drinkType = prompt("Hot or Cold drink")
-answers.push(drinkType);
+answrs.push(drinkType);
 let drinkName = prompt("Enter your Drink Name")
-answers.push(drinkName);
+answrs.push(drinkName);
 alert("drink is getting prepared")
 
-
-let i;
-let answers = [];
-for( let i = 0; i<answers.length; i++){
-    console.log(answers[i]);
+for( let i = 0; i<answrs.length; i++){
+    console.log(answrs[i]);
 }
