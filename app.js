@@ -61,27 +61,31 @@
 // li[2].textContent = `Age: ${Age}`;
 // li[3].textContent = `Drink: ${drinkN}`;
 
+  // Get a reference to the form element
+  const form = document.getElementById('myForm');
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Add an event listener to the form's submit event
-    var form = document.getElementById("add-person");
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent the form from submitting
+  // Add an event listener to the form for the "submit" event
+  form.addEventListener('submit', function(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
 
-        // Get form input values
-        var userName = document.getElementById("userName").value;
-        var drink = document.getElementById("drink").value;
-        var age = document.getElementById("age").value;
-        var gender = document.getElementById("gender").value;
+      // Access form fields
+      const name = document.getElementById('name').value;
+      const Age = document.getElementById('Age').value;
+      const drink = document.getElementById('drink').value;
+      const hot = document.getElementById('hot').checked;
+      const cold = document.getElementById('cold').checked;
 
-        // Create a new paragraph element to display the data
-        var paragraph = document.createElement("p");
-        paragraph.innerHTML = `<strong>Name:</strong> ${userName}, <strong>Drink:</strong> ${drink}, <strong>Age:</strong> ${age}, <strong>Gender:</strong> ${gender}`;
+      // Create a result message
+      let resultMessage = `Name: ${name}, Age: ${Age}, Drink: ${drink}, `;
+      if (hot) {
+          resultMessage += "Hot, ";
+      }
+      if (cold) {
+          resultMessage += "Cold, ";
+      }
 
-        // Append the paragraph to the body of the index page
-        document.body.appendChild(paragraph);
-
-        // Reset the form
-        form.reset();
-    });
-});
+      // Display the result
+      const resultDiv = document.getElementById('result');
+      resultDiv.textContent = resultMessage;
+  });

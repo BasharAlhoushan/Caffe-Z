@@ -20,23 +20,29 @@
     </div> -->
 
 
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
 
-        <form id="add-person">
-            <fieldset>
-                <legend>Add new person:</legend>
-                <label for="userName">Name:</label>
-                <input type="text" id="userName" name="userName"><br>
-                <label for="drink">Drink:</label>
-                <input type="text" id="drink" name="drink"><br>
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age">
-                <input type="submit" value="Submit">
-                <select id="gender">
-                    <option value="female">Female</option>
-                    <option value="male">Male</option>
-                </select>
-            </fieldset>
-        </form>
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age">
+        <br>
+
+        <label for="drink">Drink:</label>
+        <input type="text" id="drink" name="drink">
+        <br>
+
+        <input type="checkbox" id="hot" name="hot" value="hot">
+        <label for="hot"> Hot</label><br>
+        
+        <input type="checkbox" id="cold" name="cold" value="cold">
+        <label for="cold"> Cold</label><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
     
    
 
